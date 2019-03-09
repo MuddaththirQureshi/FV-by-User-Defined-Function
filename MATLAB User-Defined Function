@@ -1,4 +1,4 @@
-
+%Using FV Formula to Calculate value of a Cash Flow at a later date then originally recieved
 
 function FV = Compound_Interest(N,int,PV)
 %%inputting values for N,int, and PV according to User's Choice. Determines FV
