@@ -1,0 +1,56 @@
+function FV = Compound_Interest(N,int,PV)
+%%inputting values for N,int, and PV according to User's Choice. Determines FV
+[int,N]=meshgrid(int,N); 
+FV = PV.*(1+(int/100)).^N %Formula for FV
+end
+
+%%Script Below
+format short
+format bank
+N = input('Number of months');
+int = input('Interest value that is divided by Period');
+PV = input('Present Amount Invested');
+FV = Compound_Interest(N,int,PV);
+fprintf('In %5.2f months, the $1000 you invested for %5.2f months is gonna result in %5.2f dollars',int(4),N(4),FV(4,4))
+
+%%Command Window
+Number of months 12
+Interest value 5
+Present Amount Invested 1000
+FV =1795.86
+FV = 1795.86
+Future Value to be 1.80e+03>>  %Single Scalar Future Value
+%Below is Using Array Data-type in Input Arguements to attain Matrix of future values
+>> 
+Number of months[0:1:10]
+Interest value that is divided by Period[0:1:10]
+Present Amount Invested[1000]
+FV =
+  Columns 1 through 7
+       1000.00       1000.00       1000.00       1000.00       1000.00       1000.00       1000.00
+       1000.00       1010.00       1020.00       1030.00       1040.00       1050.00       1060.00
+       1000.00       1020.10       1040.40       1060.90       1081.60       1102.50       1123.60
+       1000.00       1030.30       1061.21       1092.73       1124.86       1157.63       1191.02
+       1000.00       1040.60       1082.43       1125.51       1169.86       1215.51       1262.48
+       1000.00       1051.01       1104.08       1159.27       1216.65       1276.28       1338.23
+       1000.00       1061.52       1126.16       1194.05       1265.32       1340.10       1418.52
+       1000.00       1072.14       1148.69       1229.87       1315.93       1407.10       1503.63
+       1000.00       1082.86       1171.66       1266.77       1368.57       1477.46       1593.85
+       1000.00       1093.69       1195.09       1304.77       1423.31       1551.33       1689.48
+       1000.00       1104.62       1218.99       1343.92       1480.24       1628.89       1790.85
+  Columns 8 through 11
+       1000.00       1000.00       1000.00       1000.00
+       1070.00       1080.00       1090.00       1100.00
+       1144.90       1166.40       1188.10       1210.00
+       1225.04       1259.71       1295.03       1331.00
+       1310.80       1360.49       1411.58       1464.10
+       1402.55       1469.33       1538.62       1610.51
+       1500.73       1586.87       1677.10       1771.56
+       1605.78       1713.82       1828.04       1948.72
+       1718.19       1850.93       1992.56       2143.59
+       1838.46       1999.00       2171.89       2357.95
+       1967.15       2158.92       2367.36       2593.74
+In  3.00 months, the 1000$ you invested for  3.00 months is gonna result in 1092.73 dollars>> 
+
+
+
